@@ -1,4 +1,5 @@
 import boto3
+
 from infra_configs import msk_config
 
 
@@ -16,7 +17,7 @@ def create_msk_cluster():
 #,region_name="us-east1"
     # Create MSK cluster
     response = msk_client.create_cluster_v2(
-    ClusterName = "test",Provisioned = conf
+    ClusterName = "kakfka-test",Provisioned = conf
     )
 
     print("Cluster ARN:", response['ClusterArn'])
