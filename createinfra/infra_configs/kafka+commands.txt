@@ -1,0 +1,4 @@
+kafka-topics.sh --create --topic test_events --bootstrap-server b-1.x1.y49u4b.c20.kafka.us-east-1.amazonaws.com:9092,b-2.x1.y49u4b.c20.kafka.us-east-1.amazonaws.com:9092
+kafka-console-producer.sh --topic quickstart-events --bootstrap-server localhost:9092
+kafka-console-consumer.sh --topic quickstart-events --from-beginning --bootstrap-server localhost:9092
+./kafka-console-consumer.sh --bootstrap-server b-1.x1.y49u4b.c20.kafka.us-east-1.amazonaws.com:9092,b-2.x1.y49u4b.c20.kafka.us-east-1.amazonaws.com:9092 --topic test_events
